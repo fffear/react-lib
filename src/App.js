@@ -40,6 +40,22 @@ class App extends Component {
     };
   }
 
+  addNewBookHandler = event => {
+    event.preventDefault();
+    const books = [...this.state.books];
+    const nextBookId = books.length !== 0 ? books[books.length - 1].id + 1 : 0;
+
+    books.push({
+      id: nextBookId,
+      title: event.target[0].value,
+      author: event.target[1].value,
+      pages: event.target[2].valueAsNumber,
+      read: event.target[3].value
+    });
+
+    this.setState({ books: books });
+  };
+
   changeReadStatusHandler = booksId => {
     const bookIndex = this.state.books.findIndex(b => {
       return b.id === booksId;
@@ -65,7 +81,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <Header />
+        <Header addNewBook={this.addNewBookHandler.bind(this)} />
         <Library
           books={this.state.books}
           changeReadStatusHandler={this.changeReadStatusHandler.bind(this)}

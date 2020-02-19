@@ -9,3 +9,11 @@
   font-size: calc(10px + 2vmin);
   color: white;
 }
+
+.SubmitBtn {
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+  margin-top: 1rem;
+  margin: 1rem auto auto 0;
+}

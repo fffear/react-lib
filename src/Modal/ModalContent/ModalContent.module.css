@@ -1,0 +1,26 @@
+.ModalCover {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  border: 5px solid black;
+  background-color: rgba(204, 204, 204, 0.5);
+  box-sizing: border-box;
+}
+
+.ModalArea {
+  position: relative;
+  padding: 1rem;
+  border: 1px black solid;
+  background-color: rgb(230, 230, 230);
+}
+
+.ModalClose {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  cursor: pointer;
+}
