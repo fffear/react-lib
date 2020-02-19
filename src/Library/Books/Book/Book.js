@@ -9,7 +9,9 @@ const Book = props => {
       <td>{props.pages}</td>
       <td>{props.read}</td>
       <td>
-        <button>Change Read Status</button>
+        <button onClick={props.changeReadStatusHandler}>
+          Change Read Status
+        </button>
       </td>
       <td>
         <button className={classes.RemoveBtn}>Remove</button>

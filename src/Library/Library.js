@@ -19,8 +19,8 @@ const library = props => {
       <tbody>
         <Books
           books={props.books}
+          changeReadStatusHandler={props.changeReadStatusHandler}
           // removeBookHandler={props.removeBookHandler}
-          // changeReadStatusHandler={props.changeReadStatusHandler}
         />
       </tbody>
     </table>

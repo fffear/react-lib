@@ -10,8 +10,8 @@ const Books = props => {
         author={book.author}
         pages={book.pages}
         read={book.read}
+        changeReadStatusHandler={() => props.changeReadStatusHandler(book.id)}
         // removeBookHandler={() => props.removeBookHandler(book.id)}
-        // changeReadStatusHandler={() => props.changeReadStatusHandler(book.id)}
       />
     );
   });

@@ -40,11 +40,30 @@ class App extends Component {
     };
   }
 
+  changeReadStatusHandler = booksId => {
+    const bookIndex = this.state.books.findIndex(b => {
+      return b.id === booksId;
+    });
+
+    const book = Object.assign({}, this.state.books[bookIndex]);
+
+    book.read = book.read === "Read" ? "Not Read Yet" : "Read";
+
+    const books = this.state.books.slice();
+
+    books[bookIndex] = book;
+
+    this.setState({ books: books });
+  };
+
   render() {
     return (
       <div className="App">
         <Header />
-        <Library books={this.state.books} />
+        <Library
+          books={this.state.books}
+          changeReadStatusHandler={this.changeReadStatusHandler.bind(this)}
+        />
       </div>
     );
   }
