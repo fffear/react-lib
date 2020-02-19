@@ -1,5 +1,5 @@
 import React from "react";
-// import Books from "./Books/Books";
+import Books from "./Books/Books";
 import classes from "./Library.module.css";
 
 const library = props => {
@@ -16,13 +16,13 @@ const library = props => {
         </tr>
       </thead>
 
-      {/* <tbody>
+      <tbody>
         <Books
           books={props.books}
-          removeBookHandler={props.removeBookHandler}
-          changeReadStatusHandler={props.changeReadStatusHandler}
+          // removeBookHandler={props.removeBookHandler}
+          // changeReadStatusHandler={props.changeReadStatusHandler}
         />
-      </tbody> */}
+      </tbody>
     </table>
   );
 };
