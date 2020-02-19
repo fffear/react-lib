@@ -11,7 +11,7 @@ const Books = props => {
         pages={book.pages}
         read={book.read}
         changeReadStatusHandler={() => props.changeReadStatusHandler(book.id)}
-        // removeBookHandler={() => props.removeBookHandler(book.id)}
+        removeBookHandler={() => props.removeBookHandler(book.id)}
       />
     );
   });

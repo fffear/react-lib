@@ -14,7 +14,9 @@ const Book = props => {
         </button>
       </td>
       <td>
-        <button className={classes.RemoveBtn}>Remove</button>
+        <button onClick={props.removeBookHandler} className={classes.RemoveBtn}>
+          Remove
+        </button>
       </td>
     </tr>
   );

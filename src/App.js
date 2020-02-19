@@ -56,6 +56,12 @@ class App extends Component {
     this.setState({ books: books });
   };
 
+  removeBookHandler = booksId => {
+    const books = this.state.books.slice();
+    books.splice(booksId, 1);
+    this.setState({ books: books });
+  };
+
   render() {
     return (
       <div className="App">
@@ -63,6 +69,7 @@ class App extends Component {
         <Library
           books={this.state.books}
           changeReadStatusHandler={this.changeReadStatusHandler.bind(this)}
+          removeBookHandler={this.removeBookHandler.bind(this)}
         />
       </div>
     );
